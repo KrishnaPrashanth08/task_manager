@@ -1,13 +1,13 @@
 Task Manager Web App
 A full-stack Task Manager built with ReactJS (frontend), Node.js/Express (backend), and MySQL (database).
-Users can add, view, mark as completed, and delete tasks. The app is fully responsive and works well on both desktop and mobile devices.
+Users can add, view, complete, and delete tasks. The app is fully responsive and works great on both desktop and mobile.
 
 Features
 Add new tasks (title & description)
 
 View all tasks
 
-Mark tasks as completed (with strikethrough indicator)
+Mark tasks as completed (with strikethrough)
 
 Delete tasks
 
@@ -33,12 +33,12 @@ CREATE DATABASE IF NOT EXISTS task_manager;
 USE task_manager;
 
 CREATE TABLE IF NOT EXISTS tasks (
-  id INT PRIMARY KEY AUTO_INCREMENT,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
-  description TEXT,
+  description TEXT NULL,
   is_completed TINYINT NOT NULL DEFAULT 0,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 3. Backend Setup
 bash
 cd backend
@@ -75,4 +75,4 @@ Visual indicator: Completed tasks are shown with a strikethrough.
 
 Error handling: Friendly messages for failed API requests.
 
-Clean code: Modular React components and organized backend
+Clean code: Modular React components and organized backend.
