@@ -75,23 +75,4 @@ Visual indicator: Completed tasks are shown with a strikethrough.
 
 Error handling: Friendly messages for failed API requests.
 
-Clean code: Modular React components and organized backend.
-
-Folder Structure
-text
-task-manager/
-  backend/
-    routes/
-    db.js
-    server.js
-    .env
-    package.json
-  frontend/
-    src/
-      components/
-        TaskForm.js
-        TaskList.js
-      App.js
-      App.css
-    package.json
-  README.md
+Clean code: Modular React components and organized backend
